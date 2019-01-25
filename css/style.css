@@ -11,6 +11,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    basckground: url(../img/panel.jpg) repeat-x bottom center #ffffff;
+    height: 30px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+
+}
+
 #container {
     margin: 15px auto;
     text-align: center;
@@ -40,5 +48,61 @@ p {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    background: url(../img/panel.jpg) repeat-x bottom center #ffffff;
+    width: 900px;
+    overflow: hidden;
 }
 
+#slides {    height: 240px;
+    width: 900px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.slide {
+    float: left !important; /* important = will always be applied, will overrule other rules. */
+}
+
+#menu {
+    height: 45px;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+#menu li {
+    width: 60px;
+    margin-left: -4px;
+    display: inline-block;
+    list-style: none;
+    height: 45px;
+    overflow: hidden;
+}
+
+#menu li.active, #menu li.active:hover {
+    background: url(../img/active_bg.png) no-repeat;
+}
+
+#menu li.active {
+    cursor: default;
+}
+
+#menu .sep {
+    width: 2px;
+    background: url(../img/seperator.png) no-repeat right;
+    margin-right: -2px;
+}
+
+#menu li a {
+    display: block;
+    background: url(../img/seperator.png) no-repeat right;
+    height: 35px;
+    padding-top: 10px;
+}
+
+#menu a img {
+    border: none;
+}
