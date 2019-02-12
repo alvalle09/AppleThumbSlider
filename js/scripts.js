@@ -15,6 +15,20 @@ $(document).ready(function(){
 
     $('#slides').width(totalWidth);
 
+    // added an autoscroll checkbox to turn off 
+    $('#autoscroll').click(function(e){
+        //console.log(e.target.checked);
+        e.prevenDefault;
+        let scrollChecked = e.target.checked;
+        if (scrollChecked) {
+           itval = setInterval(function() { autoScroll() }, duration * 1000);
+        }
+        else {
+            clearInterval(itval);
+        }
+    });
+
+    
     $('#menu ul li a').click(function(e, keepScroll){
         // Remove active class and add inactive
         $('li.product').removeClass('active').addClass('inactive');
@@ -25,11 +39,10 @@ $(document).ready(function(){
         $('#slides').stop().animate({marginLeft:-positions[pos]+'px'}, 450);
 
         // prevent default action of anchor link
-        e.prevenDefault;
+        e.prevenDefault();
 
         // stop autoscroll
         if(!autoScroll) clearInterval(itval);
-
     });
 
     //make first image active
