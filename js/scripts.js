@@ -39,7 +39,7 @@ $(document).ready(function(){
         $('#slides').stop().animate({marginLeft:-positions[pos]+'px'}, 450);
 
         // prevent default action of anchor link
-        e.prevenDefault();
+        e.preventDefault();
 
         // stop autoscroll
         if(!autoScroll) clearInterval(itval);
@@ -59,7 +59,7 @@ $(document).ready(function(){
     }
 
     // duration for auto-scroll
-    let duration = 2;
+    let duration = 5;
     let itval = setInterval(function() { autoScroll() }, duration * 1000);
 
 })
