@@ -7,12 +7,12 @@
 body {
     color: #666;
     font-size: 13px;
-    background: #f4f4f4;
+    background: lightgray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    basckground: url(../img/panel.jpg) repeat-x bottom center #ffffff;
+    background: url(../img/panel.jpg) repeat-x bottom center #ffffff;
     height: 30px;
     padding-top: 10px;
     border-bottom: 1px solid #ccc;
@@ -53,7 +53,8 @@ p {
     overflow: hidden;
 }
 
-#slides {    height: 240px;
+#slides {   
+    height: 240px;
     width: 900px;
     overflow: hidden;
     padding-top: 20px;
@@ -70,7 +71,6 @@ p {
 #menu ul {
     margin: 0;
     padding: 0;
-
 }
 
 #menu li {
